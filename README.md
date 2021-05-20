@@ -1,1 +1,1 @@
-# Todo-App
+This Assignment is completed using HTML and JavaScript. There are two files namely Assignmet2.html contains all front end and css. script.js contains all functions which are applicable for add city, state and population and sort them..
