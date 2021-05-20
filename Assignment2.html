@@ -1,0 +1,109 @@
+<html>
+    <head>
+      <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+      <style>
+        /* input[type="text"] {
+          margin: 0;
+          font-size: 18px;line-height: 18px;
+          height: 10px;
+          padding: 10px;
+          border: 1px solid #ddd;
+          background: #fff;
+          border-radius: 6px;
+          font-family: Lato, sans-serif;
+          color: #888;
+        } */
+
+        .button {
+          border: none;
+          width: 150px;
+          color: white;
+          padding: 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 15px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+
+        .button2 {background-color: #1195bd;
+          border-radius: 8px;} 
+        
+
+        body {background:rgb(255, 255, 255);
+          
+          font-family: Lato, sans-serif;
+        }
+      .container {
+        display: block;
+        width: 400px;
+        margin: 100px auto 0;
+      }
+      th {
+        padding:0 50px;
+      }
+      form {
+        margin-top: 100px;
+      }
+      label{
+        margin-left: 20px;
+      }
+      </style>
+    </head>
+    <body>
+      <div>
+        <form style="text-align: center;" id="myForm" >
+          <div>
+            <label>US City</label>
+            <input type="text" onkeypress="return /[a-z]/i.test(event.key)" id="city" name="city" maxlength="30" required> 
+          </div>
+          <br><br>
+          <div>
+            <label>State</label>
+            <input type="text" onkeypress="return /[a-z]/i.test(event.key)" id="state" name="state" maxlength="30" required>
+          </div>
+          <br><br>
+          <div>
+            <label>Population</label>
+            <input type="number" pattern="[0-9]" id="population" name="population" required>
+          </div>
+          <br><br>
+          <div>
+            <input class="button button2" type="button" onclick="return AddRow()" value="Add To Table" >
+          </div>
+        </form>
+      </div>
+      <div style="text-align: center;" >
+          <table  id= "populationTable">
+            <thead>
+              <tr>
+                <th onclick="sortCity(0)">City</th>
+                <th>State</th>
+                <th onclick="sortPopulation(2)">Population</th>
+              </tr>
+            </thead>
+            <tbody id="tblInformation"></tbody>
+          </table>
+         
+      </div>
+      <script src="script.js"></script>
+       
+  </body>
+</html>
